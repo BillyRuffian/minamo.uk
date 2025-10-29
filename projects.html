@@ -1,294 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Minamo Interiors - Browse our portfolio of minimal interior design projects">
-    <title>Projects - Minamo Interiors</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="design-system.css">
-    <link rel="stylesheet" href="components.css">
-    
-    <!-- Scripts -->
-    <script src="theme-toggle.js"></script>
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minamo Interiors - Browse our portfolio of minimal interior design projects">
+  <title>Projects - Minamo Interiors</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="components.css">
+
+  <!-- Scripts -->
+  <script src="theme-toggle.js"></script>
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">
-                    <img src="minamo-logo.png" alt="Minamo Logo" class="logo-image">
-                    <span>Minamo</span>
-                </a>
-                
-                <nav class="nav">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
-                </nav>
-                
-                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span>☰</span>
-                </button>
-            </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="minamo-logo.png" alt="Minamo Logo" class="logo-image">
+          <span>Minamo</span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+        </nav>
+
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Projects</h1>
+          <p class="section-description">
+            Explore our portfolio of residential and commercial interior design projects,
+            each crafted with attention to detail and a commitment to minimal elegance.
+          </p>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="section-title">Projects</h1>
-                    <p class="section-description">
-                        Explore our portfolio of residential and commercial interior design projects, 
-                        each crafted with attention to detail and a commitment to minimal elegance.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Grid -->
-        <section class="section" style="padding-top: 0;">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Project 1 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&h=600&fit=crop" 
-                                 alt="Modern minimalist living room" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2025</p>
-                            <h3 class="card-title">Urban Sanctuary</h3>
-                            <p class="card-description">
-                                A serene downtown apartment featuring clean lines, natural materials, 
-                                and an open-concept layout that maximizes light and space.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 2 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" 
-                                 alt="Contemporary office space" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Commercial · 2024</p>
-                            <h3 class="card-title">Studio Workspace</h3>
-                            <p class="card-description">
-                                An inspiring creative studio designed for collaboration and focus, 
-                                with flexible zones and thoughtful material choices.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 3 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop" 
-                                 alt="Minimal bedroom design" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2024</p>
-                            <h3 class="card-title">Coastal Retreat</h3>
-                            <p class="card-description">
-                                A tranquil bedroom space that embraces natural light, organic textures, 
-                                and a soothing color palette inspired by the seaside.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 4 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop" 
-                                 alt="Modern kitchen design" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2024</p>
-                            <h3 class="card-title">Culinary Space</h3>
-                            <p class="card-description">
-                                A functional yet beautiful kitchen where form follows function, 
-                                featuring custom cabinetry and premium appliances.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 5 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop" 
-                                 alt="Minimalist bathroom" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2024</p>
-                            <h3 class="card-title">Spa Bathroom</h3>
-                            <p class="card-description">
-                                A minimalist sanctuary focused on wellness and relaxation, 
-                                with natural stone, warm lighting, and spa-like amenities.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 6 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop" 
-                                 alt="Modern entryway" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2023</p>
-                            <h3 class="card-title">Grand Entry</h3>
-                            <p class="card-description">
-                                An elegant entrance that sets the tone for the entire home, 
-                                featuring dramatic height and curated statement pieces.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 7 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&h=600&fit=crop" 
-                                 alt="Minimalist dining room" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2023</p>
-                            <h3 class="card-title">Gathering Space</h3>
-                            <p class="card-description">
-                                A refined dining area designed for intimate gatherings, 
-                                with custom furniture and ambient lighting.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 8 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?w=800&h=600&fit=crop" 
-                                 alt="Modern home office" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2023</p>
-                            <h3 class="card-title">Home Office</h3>
-                            <p class="card-description">
-                                A productive workspace that balances professionalism with comfort, 
-                                featuring built-in storage and ergonomic design.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 9 -->
-                    <article class="card">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop" 
-                                 alt="Minimalist terrace" 
-                                 class="card-image">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-category">Residential · 2023</p>
-                            <h3 class="card-title">Urban Terrace</h3>
-                            <p class="card-description">
-                                An outdoor living space that extends the home's minimalist aesthetic, 
-                                with durable materials and lush greenery.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Start Your Project</h2>
-                    <p class="section-description">
-                        Interested in working together? Let's discuss how we can bring 
-                        your vision to life with our design expertise.
-                    </p>
-                    <div style="margin-top: var(--space-xl);">
-                        <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h6>Navigate</h6>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Services</h6>
-                    <ul class="footer-links">
-                        <li><a href="services.html#interior-design">Interior Design</a></li>
-                        <li><a href="services.html#space-planning">Space Planning</a></li>
-                        <li><a href="services.html#consultation">Consultation</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Connect</h6>
-                    <ul class="footer-links">
-                        <li><a href="#" target="_blank">Instagram</a></li>
-                        <li><a href="#" target="_blank">Pinterest</a></li>
-                        <li><a href="#" target="_blank">LinkedIn</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Contact</h6>
-                    <ul class="footer-links">
-                        <li><a href="mailto:hello@minamo.uk">hello@minamo.uk</a></li>
-                        <li><a href="tel:+44123456789">+44 123 456 789</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 Minamo Interiors. All rights reserved.
+    <!-- Projects Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="grid grid-3">
+          <!-- Project 1 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&h=600&fit=crop"
+                  alt="Modern minimalist living room" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2025</p>
+                <h3 class="card-title">Urban Sanctuary</h3>
+                <p class="card-description">
+                  A serene downtown apartment featuring clean lines, natural materials,
+                  and an open-concept layout that maximizes light and space.
                 </p>
-                <div>
-                    <a href="#" class="footer-links" style="margin-right: var(--space-md);">Privacy Policy</a>
-                    <a href="#" class="footer-links">Terms of Service</a>
-                </div>
-            </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 2 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                  alt="Contemporary office space" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Commercial · 2024</p>
+                <h3 class="card-title">Studio Workspace</h3>
+                <p class="card-description">
+                  An inspiring creative studio designed for collaboration and focus,
+                  with flexible zones and thoughtful material choices.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 3 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+                  alt="Minimal bedroom design" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2024</p>
+                <h3 class="card-title">Coastal Retreat</h3>
+                <p class="card-description">
+                  A tranquil bedroom space that embraces natural light, organic textures,
+                  and a soothing color palette inspired by the seaside.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 4 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+                  alt="Modern kitchen design" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2024</p>
+                <h3 class="card-title">Culinary Space</h3>
+                <p class="card-description">
+                  A functional yet beautiful kitchen where form follows function,
+                  featuring custom cabinetry and premium appliances.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 5 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop"
+                  alt="Minimalist bathroom" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2024</p>
+                <h3 class="card-title">Spa Bathroom</h3>
+                <p class="card-description">
+                  A minimalist sanctuary focused on wellness and relaxation,
+                  with natural stone, warm lighting, and spa-like amenities.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 6 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
+                  alt="Modern entryway" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2023</p>
+                <h3 class="card-title">Grand Entry</h3>
+                <p class="card-description">
+                  An elegant entrance that sets the tone for the entire home,
+                  featuring dramatic height and curated statement pieces.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 7 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&h=600&fit=crop"
+                  alt="Minimalist dining room" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2023</p>
+                <h3 class="card-title">Gathering Space</h3>
+                <p class="card-description">
+                  A refined dining area designed for intimate gatherings,
+                  with custom furniture and ambient lighting.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 8 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?w=800&h=600&fit=crop"
+                  alt="Modern home office" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2023</p>
+                <h3 class="card-title">Home Office</h3>
+                <p class="card-description">
+                  A productive workspace that balances professionalism with comfort,
+                  featuring built-in storage and ergonomic design.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Project 9 -->
+          <a href="project.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop"
+                  alt="Minimalist terrace" class="card-image">
+              </div>
+              <div class="card-content">
+                <p class="card-category">Residential · 2023</p>
+                <h3 class="card-title">Urban Terrace</h3>
+                <p class="card-description">
+                  An outdoor living space that extends the home's minimalist aesthetic,
+                  with durable materials and lush greenery.
+                </p>
+              </div>
+            </article>
+          </a>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Start Your Project</h2>
+          <p class="section-description">
+            Interested in working together? Let's discuss how we can bring
+            your vision to life with our design expertise.
+          </p>
+          <div style="margin-top: var(--space-xl);">
+            <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h6>Navigate</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#interior-design">Interior Design</a></li>
+            <li><a href="services.html#space-planning">Space Planning</a></li>
+            <li><a href="services.html#consultation">Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Connect</h6>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Pinterest</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Contact</h6>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@minamo.uk">hello@minamo.uk</a></li>
+            <li><a href="tel:+44123456789">+44 123 456 789</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Minamo Interiors. All rights reserved.
+        </p>
+        <div>
+          <a href="#" class="footer-links" style="margin-right: var(--space-md);">Privacy Policy</a>
+          <a href="#" class="footer-links">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

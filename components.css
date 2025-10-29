@@ -7,7 +7,12 @@
    TYPOGRAPHY COMPONENTS
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
@@ -32,7 +37,8 @@ h4 {
   font-size: var(--font-size-lg);
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: var(--font-size-base);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wide);
@@ -64,6 +70,9 @@ a:hover {
   z-index: var(--z-sticky);
   background-color: var(--color-background);
   border-bottom: var(--border-width) solid var(--color-border);
+  border-left: var(--border-width) solid var(--color-border);
+  border-right: var(--border-width) solid var(--color-border);
+  border-top: var(--border-width) solid var(--color-border);
   transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
@@ -98,7 +107,8 @@ a:hover {
 }
 
 .logo-image {
-  display: none; /* Hidden per requirements */
+  display: none;
+  /* Hidden per requirements */
 }
 
 .nav {
@@ -173,12 +183,12 @@ a:hover {
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .header-inner {
     border-left: none;
     border-right: none;
   }
-  
+
   .nav {
     position: fixed;
     top: var(--header-height);
@@ -195,11 +205,11 @@ a:hover {
     transform: translateX(100%);
     transition: transform var(--transition-base);
   }
-  
+
   .nav.active {
     transform: translateX(0);
   }
-  
+
   .nav-link::after {
     display: none;
   }
@@ -212,23 +222,39 @@ a:hover {
 /* Base Card */
 .card {
   background-color: var(--color-surface);
-  border: none; /* Grid provides borders */
+  border: none !important;
+  /* Grid provides borders - force no border on card */
   border-radius: 0;
   transition: all var(--transition-base);
   overflow: visible;
-  padding: var(--space-lg); /* Wide internal padding */
+  padding: var(--space-lg);
+  /* Wide internal padding */
 }
 
 .card:hover {
   background-color: var(--color-surface-alt);
 }
 
+/* Clickable Cards (wrapped in links) */
+a>.card {
+  cursor: pointer;
+  display: block;
+  border: none !important;
+}
+
+a:hover>.card {
+  background-color: var(--color-surface-alt);
+}
+
 /* Card with Image */
 .card-image-wrapper {
   position: relative;
-  width: 100%; /* Stay within padding */
-  margin-bottom: var(--space-lg); /* Space below image */
-  padding-bottom: 66.67%; /* 3:2 aspect ratio */
+  width: 100%;
+  /* Stay within padding */
+  margin-bottom: var(--space-lg);
+  /* Space below image */
+  padding-bottom: 66.67%;
+  /* 3:2 aspect ratio */
   overflow: hidden;
   background-color: var(--color-surface-alt);
 }
@@ -247,9 +273,14 @@ a:hover {
   transform: scale(1.05);
 }
 
+a:hover>.card .card-image {
+  transform: scale(1.05);
+}
+
 /* Card Content */
 .card-content {
-  padding: 0; /* Remove padding since card now has it */
+  padding: 0;
+  /* Remove padding since card now has it */
 }
 
 .card-category {
@@ -281,7 +312,8 @@ a:hover {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  padding: var(--space-xl); /* Add generous padding */
+  padding: var(--space-xl);
+  /* Add generous padding */
 }
 
 .card-minimal:hover {
@@ -290,7 +322,8 @@ a:hover {
 }
 
 .card-minimal .card-content {
-  padding: 0; /* Content uses card's padding */
+  padding: 0;
+  /* Content uses card's padding */
 }
 
 /* Standalone cards (not in grid) need borders */
@@ -308,7 +341,8 @@ a:hover {
 
 .grid {
   display: grid;
-  gap: 0; /* No gap - borders create spacing */
+  gap: 0;
+  /* No gap - borders create spacing */
   border: var(--border-width) solid var(--color-border);
 }
 
@@ -325,31 +359,50 @@ a:hover {
 }
 
 /* Grid children get borders to create line-based layout */
-.grid > * {
+.grid>* {
   border-right: var(--border-width) solid var(--color-border);
   border-bottom: var(--border-width) solid var(--color-border);
 }
 
+/* Ensure links in grids don't add visual weight */
+.grid>a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grid>a:focus {
+  outline: none;
+}
+
+.grid>a:active {
+  outline: none;
+}
+
 /* Remove right border from last column items */
-.grid-2 > *:nth-child(2n),
-.grid-3 > *:nth-child(3n),
-.grid-4 > *:nth-child(4n) {
+.grid-2>*:nth-child(2n),
+.grid-3>*:nth-child(3n),
+.grid-4>*:nth-child(4n) {
   border-right: none;
 }
 
 /* Remove bottom border from all items in last row for common grid sizes */
 /* For 2-column grids with 4, 6, 8, 10 items */
-.grid-2 > *:nth-last-child(-n+2) {
+.grid-2>*:nth-last-child(-n+2) {
   border-bottom: none;
 }
 
 /* For 3-column grids with 3, 6, 9 items */
-.grid-3 > *:nth-last-child(-n+3) {
+.grid-3>*:nth-last-child(-n+3) {
   border-bottom: none;
 }
 
 /* For 4-column grids with 4, 8, 12 items */
-.grid-4 > *:nth-last-child(-n+4) {
+.grid-4>*:nth-last-child(-n+4) {
   border-bottom: none;
 }
 
@@ -358,59 +411,60 @@ a:hover {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .grid-4 > *:nth-child(4n) {
+
+  .grid-4>*:nth-child(4n) {
     border-right: var(--border-width) solid var(--color-border);
   }
-  
-  .grid-4 > *:nth-child(2n) {
+
+  .grid-4>*:nth-child(2n) {
     border-right: none;
   }
-  
+
   /* Adjust bottom borders for 2-column layout */
-  .grid-4 > *:nth-last-child(-n+4) {
+  .grid-4>*:nth-last-child(-n+4) {
     border-bottom: var(--border-width) solid var(--color-border);
   }
-  
-  .grid-4 > *:nth-last-child(-n+2) {
+
+  .grid-4>*:nth-last-child(-n+2) {
     border-bottom: none;
   }
-  
+
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .grid-3 > *:nth-child(3n) {
+
+  .grid-3>*:nth-child(3n) {
     border-right: var(--border-width) solid var(--color-border);
   }
-  
-  .grid-3 > *:nth-child(2n) {
+
+  .grid-3>*:nth-child(2n) {
     border-right: none;
   }
-  
+
   /* Adjust bottom borders for 2-column layout */
-  .grid-3 > *:nth-last-child(-n+3) {
+  .grid-3>*:nth-last-child(-n+3) {
     border-bottom: var(--border-width) solid var(--color-border);
   }
-  
-  .grid-3 > *:nth-last-child(-n+2) {
+
+  .grid-3>*:nth-last-child(-n+2) {
     border-bottom: none;
   }
 }
 
 @media (max-width: 639px) {
+
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
   }
-  
-  .grid > * {
+
+  .grid>* {
     border-right: none !important;
   }
-  
+
   /* Single column - only last item has no bottom border */
-  .grid > *:last-child {
+  .grid>*:last-child {
     border-bottom: none !important;
   }
 }
@@ -569,7 +623,7 @@ a:hover {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .footer {
     border-left: none;
     border-right: none;
@@ -591,7 +645,8 @@ a:hover {
 }
 
 .hero-logo {
-  display: none; /* Hidden per requirements */
+  display: none;
+  /* Hidden per requirements */
 }
 
 .hero-title {
@@ -623,19 +678,19 @@ a:hover {
     border-left: none;
     border-right: none;
   }
-  
+
   .hero-logo {
     display: none;
   }
-  
+
   .hero-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .hero-subtitle {
     font-size: var(--font-size-base);
   }
-  
+
   .hero-description {
     font-size: var(--font-size-base);
   }
@@ -677,11 +732,11 @@ a:hover {
     border-left: none;
     border-right: none;
   }
-  
+
   .section-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .section-description {
     font-size: var(--font-size-base);
   }

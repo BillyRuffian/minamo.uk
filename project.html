@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project Details - Minamo Interiors">
+  <title>Project Name - Minamo Interiors</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="components.css">
+
+  <!-- Scripts -->
+  <script src="theme-toggle.js"></script>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="minamo-logo.png" alt="Minamo Logo" class="logo-image">
+          <span>Minamo</span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+        </nav>
+
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Project Hero -->
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom: var(--space-2xl);">
+          <a href="projects.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: var(--font-size-sm);">
+            ← Back to Projects
+          </a>
+        </div>
+        
+        <div class="grid grid-2">
+          <div style="padding: var(--space-xl);">
+            <p class="card-category">Residential / 2024</p>
+            <h1 style="font-size: var(--font-size-3xl); font-weight: 300; margin: var(--space-md) 0 var(--space-lg) 0;">
+              Urban Sanctuary
+            </h1>
+            <p style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+              A serene downtown apartment featuring clean lines and natural materials. 
+              This project demonstrates our commitment to creating peaceful urban retreats 
+              that balance modern aesthetics with functional living spaces.
+            </p>
+
+            <div>
+              <h3 style="font-size: var(--font-size-sm); font-weight: 600; text-transform: uppercase; 
+                         letter-spacing: 0.1em; margin-bottom: var(--space-md);">
+                Project Details
+              </h3>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg);">
+                <div>
+                  <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-xs);">
+                    Location
+                  </p>
+                  <p style="font-weight: 500;">London, UK</p>
+                </div>
+                <div>
+                  <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-xs);">
+                    Year
+                  </p>
+                  <p style="font-weight: 500;">2024</p>
+                </div>
+                <div>
+                  <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-xs);">
+                    Area
+                  </p>
+                  <p style="font-weight: 500;">120 m²</p>
+                </div>
+                <div>
+                  <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-xs);">
+                    Type
+                  </p>
+                  <p style="font-weight: 500;">Residential</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: var(--space-xl);">
+            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&h=900&fit=crop"
+              alt="Urban Sanctuary - Main view" 
+              style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="section" style="background-color: var(--color-surface-alt);">
+      <div class="container">
+        <div class="grid grid-2">
+          <div style="padding: var(--space-xl);">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=1000&fit=crop"
+              alt="Detail view 1" 
+              style="width: 100%; height: auto; display: block;">
+          </div>
+          <div style="padding: var(--space-xl);">
+            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&h=1000&fit=crop"
+              alt="Detail view 2" 
+              style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-1">
+          <div style="padding: var(--space-xl);">
+            <img src="https://images.unsplash.com/photo-1600210492497-ee5c5e31dd9b?w=1400&h=800&fit=crop"
+              alt="Wide view" 
+              style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Description -->
+    <section class="section" style="background-color: var(--color-surface-alt);">
+      <div class="container">
+        <div class="grid grid-2">
+          <div style="padding: var(--space-xl);">
+            <h2 style="font-size: var(--font-size-xl); font-weight: 300; margin-bottom: var(--space-lg);">
+              Design Approach
+            </h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--space-lg);">
+              Our approach for this urban apartment centered on creating a sense of 
+              tranquility within a bustling city environment. We carefully selected 
+              materials that would bring warmth and texture while maintaining the 
+              clean, minimal aesthetic our client desired.
+            </p>
+            <p style="color: var(--color-text-secondary); line-height: 1.8; margin: 0;">
+              The open-plan living area flows seamlessly into private spaces, with 
+              subtle spatial divisions created through thoughtful furniture placement 
+              and changes in material palette. Natural light was maximized through 
+              strategic window treatments and reflective surfaces.
+            </p>
+          </div>
+
+          <div style="padding: var(--space-xl);">
+            <h3 style="font-size: var(--font-size-sm); font-weight: 600; text-transform: uppercase; 
+                       letter-spacing: 0.1em; margin-bottom: var(--space-lg);">
+              Materials & Finishes
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                White oak flooring throughout
+              </li>
+              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                Venetian plaster walls
+              </li>
+              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                Natural linen curtains
+              </li>
+              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                Limestone countertops
+              </li>
+              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
+                Matte black fixtures
+              </li>
+              <li style="padding: var(--space-sm) 0;">
+                Custom millwork in walnut
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Related Projects</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Project Card 1 -->
+          <article class="card">
+            <div class="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-600210492493-0946911123ea?w=800&h=600&fit=crop"
+                alt="Modern minimalist living room" class="card-image">
+            </div>
+            <div class="card-content">
+              <p class="card-category">Residential</p>
+              <h3 class="card-title">Coastal Retreat</h3>
+              <p class="card-description">
+                A tranquil bedroom space embracing natural light and organic textures
+              </p>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="card">
+            <div class="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                alt="Contemporary office space" class="card-image">
+            </div>
+            <div class="card-content">
+              <p class="card-category">Commercial</p>
+              <h3 class="card-title">Studio Workspace</h3>
+              <p class="card-description">
+                An inspiring creative studio designed for collaboration and focus
+              </p>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="card">
+            <div class="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+                alt="Modern kitchen design" class="card-image">
+            </div>
+            <div class="card-content">
+              <p class="card-category">Residential</p>
+              <h3 class="card-title">Culinary Space</h3>
+              <p class="card-description">
+                A functional yet beautiful kitchen where form follows function
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-2xl);">
+          <a href="projects.html" class="btn btn-primary btn-large">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background-color: var(--color-surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Start Your Project</h2>
+          <p class="section-description">
+            Ready to transform your space? Let's discuss your vision and
+            create something beautiful together.
+          </p>
+          <div style="margin-top: var(--space-xl);">
+            <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h6>Navigate</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#interior-design">Interior Design</a></li>
+            <li><a href="services.html#space-planning">Space Planning</a></li>
+            <li><a href="services.html#consultation">Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Connect</h6>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Pinterest</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Contact</h6>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@minamo.uk">hello@minamo.uk</a></li>
+            <li><a href="tel:+44123456789">+44 123 456 789</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Minamo Interiors. All rights reserved.
+        </p>
+        <div>
+          <a href="#" class="footer-links" style="margin-right: var(--space-md);">Privacy Policy</a>
+          <a href="#" class="footer-links">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

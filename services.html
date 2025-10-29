@@ -1,269 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Minamo Interiors - Our interior design and consultation services">
-    <title>Services - Minamo Interiors</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="design-system.css">
-    <link rel="stylesheet" href="components.css">
-    
-    <!-- Scripts -->
-    <script src="theme-toggle.js"></script>
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minamo Interiors - Our interior design and consultation services">
+  <title>Services - Minamo Interiors</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="components.css">
+
+  <!-- Scripts -->
+  <script src="theme-toggle.js"></script>
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">
-                    <img src="minamo-logo.png" alt="Minamo Logo" class="logo-image">
-                    <span>Minamo</span>
-                </a>
-                
-                <nav class="nav">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
-                </nav>
-                
-                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span>☰</span>
-                </button>
-            </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="minamo-logo.png" alt="Minamo Logo" class="logo-image">
+          <span>Minamo</span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+        </nav>
+
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Services</h1>
+          <p class="section-description">
+            Comprehensive interior design solutions tailored to your vision.
+            From initial concept to final installation, we're with you every step of the way.
+          </p>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="section-title">Services</h1>
-                    <p class="section-description">
-                        Comprehensive interior design solutions tailored to your vision. 
-                        From initial concept to final installation, we're with you every step of the way.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- Services Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <!-- Service 1 -->
+        <article id="interior-design" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
+          <div class="card-content" style="padding: var(--space-xl);">
+            <p class="card-category">01</p>
+            <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Interior
+              Design</h2>
+            <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
+              Our full-service interior design offering covers every aspect of your project,
+              from conceptual development to final styling. We work closely with you to understand
+              your lifestyle, aesthetic preferences, and functional requirements.
+            </p>
 
-        <!-- Services Grid -->
-        <section class="section" style="padding-top: 0;">
-            <div class="container">
-                <!-- Service 1 -->
-                <article id="interior-design" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
-                    <div class="card-content" style="padding: var(--space-xl);">
-                        <p class="card-category">01</p>
-                        <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Interior Design</h2>
-                        <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
-                            Our full-service interior design offering covers every aspect of your project, 
-                            from conceptual development to final styling. We work closely with you to understand 
-                            your lifestyle, aesthetic preferences, and functional requirements.
-                        </p>
-                        
-                        <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
-                        <ul style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
-                            <li style="margin-bottom: var(--space-xs);">→ Initial consultation and site analysis</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Concept development and mood boards</li>
-                            <li style="margin-bottom: var(--space-xs);">→ 3D renderings and visualizations</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Material and furniture selection</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Custom furniture design</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Contractor coordination</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Project management and installation</li>
-                        </ul>
-                        
-                        <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
-                    </div>
-                </article>
-                
-                <!-- Service 2 -->
-                <article id="space-planning" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
-                    <div class="card-content" style="padding: var(--space-xl);">
-                        <p class="card-category">02</p>
-                        <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Space Planning</h2>
-                        <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
-                            Strategic space planning is the foundation of great design. We analyze traffic flow, 
-                            optimize layouts, and ensure every square foot of your space works efficiently while 
-                            maintaining aesthetic harmony.
-                        </p>
-                        
-                        <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
-                        <ul style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
-                            <li style="margin-bottom: var(--space-xs);">→ Detailed floor plans and layouts</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Traffic flow analysis</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Furniture placement recommendations</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Lighting and electrical plans</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Storage solutions</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Multi-functional space design</li>
-                        </ul>
-                        
-                        <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
-                    </div>
-                </article>
-                
-                <!-- Service 3 -->
-                <article id="consultation" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
-                    <div class="card-content" style="padding: var(--space-xl);">
-                        <p class="card-category">03</p>
-                        <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Design Consultation</h2>
-                        <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
-                            Perfect for DIY enthusiasts who want professional guidance. Our consultation service 
-                            provides expert advice on color palettes, furniture selection, layout options, and 
-                            material choices to guide your design decisions.
-                        </p>
-                        
-                        <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
-                        <ul style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
-                            <li style="margin-bottom: var(--space-xs);">→ 90-minute design consultation</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Space assessment and recommendations</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Color palette suggestions</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Furniture and decor sourcing list</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Layout sketches and ideas</li>
-                            <li style="margin-bottom: var(--space-xs);">→ Follow-up support via email</li>
-                        </ul>
-                        
-                        <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
-                    </div>
-                </article>
-            </div>
-        </section>
+            <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
+            <ul
+              style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
+              <li style="margin-bottom: var(--space-xs);">→ Initial consultation and site analysis</li>
+              <li style="margin-bottom: var(--space-xs);">→ Concept development and mood boards</li>
+              <li style="margin-bottom: var(--space-xs);">→ 3D renderings and visualizations</li>
+              <li style="margin-bottom: var(--space-xs);">→ Material and furniture selection</li>
+              <li style="margin-bottom: var(--space-xs);">→ Custom furniture design</li>
+              <li style="margin-bottom: var(--space-xs);">→ Contractor coordination</li>
+              <li style="margin-bottom: var(--space-xs);">→ Project management and installation</li>
+            </ul>
 
-        <!-- Process Section -->
-        <section class="section" style="background-color: var(--color-surface-alt);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our Process</h2>
-                    <p class="section-description">
-                        A thoughtful, collaborative approach to creating spaces that inspire
-                    </p>
-                </div>
-                
-                <div class="grid grid-4">
-                    <article class="card-minimal">
-                        <div class="card-content">
-                            <p class="card-category">Step 1</p>
-                            <h4 class="card-title" style="font-size: var(--font-size-lg);">Discover</h4>
-                            <p class="card-description">
-                                We meet to understand your vision, lifestyle, and project goals.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <article class="card-minimal">
-                        <div class="card-content">
-                            <p class="card-category">Step 2</p>
-                            <h4 class="card-title" style="font-size: var(--font-size-lg);">Design</h4>
-                            <p class="card-description">
-                                We develop concepts, create mood boards, and refine the design direction.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <article class="card-minimal">
-                        <div class="card-content">
-                            <p class="card-category">Step 3</p>
-                            <h4 class="card-title" style="font-size: var(--font-size-lg);">Develop</h4>
-                            <p class="card-description">
-                                We finalize selections, coordinate with contractors, and prepare for installation.
-                            </p>
-                        </div>
-                    </article>
-                    
-                    <article class="card-minimal">
-                        <div class="card-content">
-                            <p class="card-category">Step 4</p>
-                            <h4 class="card-title" style="font-size: var(--font-size-lg);">Deliver</h4>
-                            <p class="card-description">
-                                We manage installation, style your space, and ensure every detail is perfect.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+            <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+          </div>
+        </article>
 
-        <!-- CTA Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Let's Work Together</h2>
-                    <p class="section-description">
-                        Ready to transform your space? Reach out to discuss your project 
-                        and discover how we can help bring your vision to life.
-                    </p>
-                    <div style="margin-top: var(--space-xl);">
-                        <a href="contact.html" class="btn btn-primary btn-large">Start Your Project</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Service 2 -->
+        <article id="space-planning" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
+          <div class="card-content" style="padding: var(--space-xl);">
+            <p class="card-category">02</p>
+            <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Space
+              Planning</h2>
+            <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
+              Strategic space planning is the foundation of great design. We analyze traffic flow,
+              optimize layouts, and ensure every square foot of your space works efficiently while
+              maintaining aesthetic harmony.
+            </p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h6>Navigate</h6>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Services</h6>
-                    <ul class="footer-links">
-                        <li><a href="services.html#interior-design">Interior Design</a></li>
-                        <li><a href="services.html#space-planning">Space Planning</a></li>
-                        <li><a href="services.html#consultation">Consultation</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Connect</h6>
-                    <ul class="footer-links">
-                        <li><a href="#" target="_blank">Instagram</a></li>
-                        <li><a href="#" target="_blank">Pinterest</a></li>
-                        <li><a href="#" target="_blank">LinkedIn</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h6>Contact</h6>
-                    <ul class="footer-links">
-                        <li><a href="mailto:hello@minamo.uk">hello@minamo.uk</a></li>
-                        <li><a href="tel:+44123456789">+44 123 456 789</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 Minamo Interiors. All rights reserved.
-                </p>
-                <div>
-                    <a href="#" class="footer-links" style="margin-right: var(--space-md);">Privacy Policy</a>
-                    <a href="#" class="footer-links">Terms of Service</a>
-                </div>
-            </div>
+            <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
+            <ul
+              style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
+              <li style="margin-bottom: var(--space-xs);">→ Detailed floor plans and layouts</li>
+              <li style="margin-bottom: var(--space-xs);">→ Traffic flow analysis</li>
+              <li style="margin-bottom: var(--space-xs);">→ Furniture placement recommendations</li>
+              <li style="margin-bottom: var(--space-xs);">→ Lighting and electrical plans</li>
+              <li style="margin-bottom: var(--space-xs);">→ Storage solutions</li>
+              <li style="margin-bottom: var(--space-xs);">→ Multi-functional space design</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article id="consultation" class="card" style="margin-bottom: var(--space-2xl); padding: 0;">
+          <div class="card-content" style="padding: var(--space-xl);">
+            <p class="card-category">03</p>
+            <h2 class="card-title" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Design
+              Consultation</h2>
+            <p class="card-description" style="font-size: var(--font-size-base); margin-bottom: var(--space-lg);">
+              Perfect for DIY enthusiasts who want professional guidance. Our consultation service
+              provides expert advice on color palettes, furniture selection, layout options, and
+              material choices to guide your design decisions.
+            </p>
+
+            <h4 style="margin-bottom: var(--space-sm); font-size: var(--font-size-base);">What's Included:</h4>
+            <ul
+              style="list-style: none; padding: 0; color: var(--color-text-secondary); margin-bottom: var(--space-lg);">
+              <li style="margin-bottom: var(--space-xs);">→ 90-minute design consultation</li>
+              <li style="margin-bottom: var(--space-xs);">→ Space assessment and recommendations</li>
+              <li style="margin-bottom: var(--space-xs);">→ Color palette suggestions</li>
+              <li style="margin-bottom: var(--space-xs);">→ Furniture and decor sourcing list</li>
+              <li style="margin-bottom: var(--space-xs);">→ Layout sketches and ideas</li>
+              <li style="margin-bottom: var(--space-xs);">→ Follow-up support via email</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section" style="background-color: var(--color-surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Process</h2>
+          <p class="section-description">
+            A thoughtful, collaborative approach to creating spaces that inspire
+          </p>
         </div>
-    </footer>
+
+        <div class="grid grid-4">
+          <article class="card-minimal">
+            <div class="card-content">
+              <p class="card-category">Step 1</p>
+              <h4 class="card-title" style="font-size: var(--font-size-lg);">Discover</h4>
+              <p class="card-description">
+                We meet to understand your vision, lifestyle, and project goals.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-minimal">
+            <div class="card-content">
+              <p class="card-category">Step 2</p>
+              <h4 class="card-title" style="font-size: var(--font-size-lg);">Design</h4>
+              <p class="card-description">
+                We develop concepts, create mood boards, and refine the design direction.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-minimal">
+            <div class="card-content">
+              <p class="card-category">Step 3</p>
+              <h4 class="card-title" style="font-size: var(--font-size-lg);">Develop</h4>
+              <p class="card-description">
+                We finalize selections, coordinate with contractors, and prepare for installation.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-minimal">
+            <div class="card-content">
+              <p class="card-category">Step 4</p>
+              <h4 class="card-title" style="font-size: var(--font-size-lg);">Deliver</h4>
+              <p class="card-description">
+                We manage installation, style your space, and ensure every detail is perfect.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-description">
+            Ready to transform your space? Reach out to discuss your project
+            and discover how we can help bring your vision to life.
+          </p>
+          <div style="margin-top: var(--space-xl);">
+            <a href="contact.html" class="btn btn-primary btn-large">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h6>Navigate</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#interior-design">Interior Design</a></li>
+            <li><a href="services.html#space-planning">Space Planning</a></li>
+            <li><a href="services.html#consultation">Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Connect</h6>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Pinterest</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h6>Contact</h6>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@minamo.uk">hello@minamo.uk</a></li>
+            <li><a href="tel:+44123456789">+44 123 456 789</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Minamo Interiors. All rights reserved.
+        </p>
+        <div>
+          <a href="#" class="footer-links" style="margin-right: var(--space-md);">Privacy Policy</a>
+          <a href="#" class="footer-links">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
