@@ -257,6 +257,18 @@ body {
   color: var(--color-text-tertiary);
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-xs {
   font-size: var(--font-size-xs);
 }

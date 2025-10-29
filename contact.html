@@ -66,10 +66,10 @@
     <!-- Contact Section -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="grid grid-2" style="gap: var(--space-3xl);">
+        <div class="grid grid-2">
           <!-- Contact Form -->
-          <div>
-            <form data-validate style="max-width: 600px;">
+          <div class="grid-cell-padding">
+            <form data-validate>
               <div class="form-group">
                 <label for="name" class="form-label">Name *</label>
                 <input type="text" id="name" name="name" class="form-input" required>
@@ -112,52 +112,52 @@
                 <textarea id="message" name="message" class="form-textarea" required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+              <button type="submit" class="btn btn-primary btn-large">
                 Send Message
               </button>
             </form>
           </div>
 
           <!-- Contact Information -->
-          <div>
-            <div style="position: sticky; top: calc(var(--header-height) + var(--space-lg));">
-              <h3 style="margin-bottom: var(--space-lg);">Contact Information</h3>
+          <div class="grid-cell-padding">
+            <div class="contact-info-sticky">
+              <h3 class="mb-lg">Contact Information</h3>
 
-              <div style="margin-bottom: var(--space-xl);">
-                <h5 style="margin-bottom: var(--space-sm);">Email</h5>
-                <p style="color: var(--color-text-secondary);">
+              <div class="mb-xl">
+                <h5 class="mb-sm">Email</h5>
+                <p class="text-secondary">
                   <a href="mailto:hello@minamo.uk">hello@minamo.uk</a>
                 </p>
               </div>
 
-              <div style="margin-bottom: var(--space-xl);">
-                <h5 style="margin-bottom: var(--space-sm);">Phone</h5>
-                <p style="color: var(--color-text-secondary);">
+              <div class="mb-xl">
+                <h5 class="mb-sm">Phone</h5>
+                <p class="text-secondary">
                   <a href="tel:+44123456789">+44 123 456 789</a>
                 </p>
               </div>
 
-              <div style="margin-bottom: var(--space-xl);">
-                <h5 style="margin-bottom: var(--space-sm);">Office Hours</h5>
-                <p style="color: var(--color-text-secondary); margin-bottom: var(--space-xs);">
+              <div class="mb-xl">
+                <h5 class="mb-sm">Office Hours</h5>
+                <p class="text-secondary mb-xs">
                   Monday - Friday: 9:00 - 17:00
                 </p>
-                <p style="color: var(--color-text-secondary);">
+                <p class="text-secondary">
                   Weekend: By Appointment
                 </p>
               </div>
 
-              <div style="margin-bottom: var(--space-xl);">
-                <h5 style="margin-bottom: var(--space-sm);">Studio Location</h5>
-                <p style="color: var(--color-text-secondary);">
+              <div class="mb-xl">
+                <h5 class="mb-sm">Studio Location</h5>
+                <p class="text-secondary">
                   London, United Kingdom<br>
-                  <em style="font-size: var(--font-size-sm);">Exact address provided upon consultation</em>
+                  <em class="text-sm">Exact address provided upon consultation</em>
                 </p>
               </div>
 
               <div>
-                <h5 style="margin-bottom: var(--space-sm);">Follow Us</h5>
-                <div style="display: flex; gap: var(--space-md);">
+                <h5 class="mb-sm">Follow Us</h5>
+                <div class="contact-social-links">
                   <a href="#" class="btn" target="_blank">Instagram</a>
                   <a href="#" class="btn" target="_blank">Pinterest</a>
                   <a href="#" class="btn" target="_blank">LinkedIn</a>
@@ -170,42 +170,42 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" style="background-color: var(--color-surface-alt);">
+    <section class="section section-alt">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Frequently Asked Questions</h2>
         </div>
 
-        <div style="max-width: 800px; margin: 0 auto;">
-          <div style="margin-bottom: var(--space-xl);">
-            <h4 style="margin-bottom: var(--space-sm);">What is your typical project timeline?</h4>
-            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+        <div class="faq-container">
+          <div class="faq-item">
+            <h4 class="faq-question">What is your typical project timeline?</h4>
+            <p class="faq-answer">
               Project timelines vary depending on scope and complexity. A typical residential
               project takes 3-6 months from concept to completion. We'll provide a detailed
               timeline during our initial consultation.
             </p>
           </div>
 
-          <div style="margin-bottom: var(--space-xl);">
-            <h4 style="margin-bottom: var(--space-sm);">Do you work outside of London?</h4>
-            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+          <div class="faq-item">
+            <h4 class="faq-question">Do you work outside of London?</h4>
+            <p class="faq-answer">
               Yes, we take on select projects throughout the UK and internationally.
               Travel expenses may apply for projects outside our primary service area.
             </p>
           </div>
 
-          <div style="margin-bottom: var(--space-xl);">
-            <h4 style="margin-bottom: var(--space-sm);">What is your design fee structure?</h4>
-            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+          <div class="faq-item">
+            <h4 class="faq-question">What is your design fee structure?</h4>
+            <p class="faq-answer">
               Our fees vary based on project scope and can be structured as a flat fee,
               hourly rate, or percentage of project cost. We'll discuss the best approach
               for your specific project during our consultation.
             </p>
           </div>
 
-          <div style="margin-bottom: var(--space-xl);">
-            <h4 style="margin-bottom: var(--space-sm);">Do you manage construction and installation?</h4>
-            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+          <div class="faq-item">
+            <h4 class="faq-question">Do you manage construction and installation?</h4>
+            <p class="faq-answer">
               Yes, we can provide full project management including contractor coordination
               and installation oversight. We also work with trusted contractors and can
               provide recommendations.

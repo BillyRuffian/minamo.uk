@@ -1,12 +1,13 @@
 # Minamo Design System
 
-A minimal, brutalist design system for the Minamo Interiors website. Inspired by contemporary minimalist design with a focus on typography, whitespace, and content-first layouts.
+A minimal, brutalist design system for the Minamo Interiors website with a focus on monochrome aesthetics, line-based grids, and strong visual hierarchy.
 
 ## Design Philosophy
 
-- **Brutalist Minimalism**: Clean lines, generous whitespace, and clear hierarchy
+- **Brutalist Minimalism**: Stark monochrome palette with strong border lines
+- **Line-Based Grid**: Borders create spatial divisions instead of gaps
 - **Typography-First**: Montserrat as the primary typeface with careful attention to scale and spacing
-- **Content-Focused**: Minimal chrome, letting content breathe
+- **Content-Focused**: Minimal decoration, letting content and structure speak
 - **Responsive**: Mobile-first approach with seamless scaling across devices
 - **Accessible**: Semantic HTML, ARIA labels, and keyboard navigation
 
@@ -15,37 +16,37 @@ A minimal, brutalist design system for the Minamo Interiors website. Inspired by
 ### Light Mode (Default)
 
 ```css
-Background:     #fdf8f0  /* Light cream */
+Background:     #fafafa  /* Off-white */
 Surface:        #ffffff  /* White */
-Surface Alt:    #f5f0e8  /* Subtle cream tint */
+Surface Alt:    #f5f5f5  /* Subtle gray tint */
 
-Text Primary:   #1b4c3f  /* Deep green */
-Text Secondary: #5a7a6f  /* Medium green */
-Text Tertiary:  #8a9e95  /* Light green */
+Text Primary:   #1a1a1a  /* Near black */
+Text Secondary: #666666  /* Medium gray */
+Text Tertiary:  #999999  /* Light gray */
 
-Border:         #e8e0d5  /* Light border */
-Border Hover:   #d5cdc0  /* Darker on interaction */
+Border:         #1a1a1a  /* Near black - strong borders */
+Border Hover:   #000000  /* Pure black on interaction */
 
-Accent:         #1b4c3f  /* Brand green */
-Accent Hover:   #143b30  /* Darker on hover */
+Accent:         #1a1a1a  /* Brand black */
+Accent Hover:   #000000  /* Darker on hover */
 ```
 
 ### Dark Mode
 
 ```css
-Background:     #1a1a1a  /* Near black */
-Surface:        #222222  /* Dark surface */
-Surface Alt:    #2a2a2a  /* Lighter surface */
+Background:     #0a0a0a  /* Near black */
+Surface:        #1a1a1a  /* Dark surface */
+Surface Alt:    #141414  /* Slightly lighter surface */
 
-Text Primary:   #e8e0d5  /* Cream text */
-Text Secondary: #a39d94  /* Medium gray */
-Text Tertiary:  #787268  /* Dark gray */
+Text Primary:   #fafafa  /* Off-white text */
+Text Secondary: #999999  /* Medium gray */
+Text Tertiary:  #666666  /* Dark gray */
 
-Border:         #2a2a2a  /* Subtle border */
-Border Hover:   #3a3a3a  /* Lighter on interaction */
+Border:         #fafafa  /* Off-white borders */
+Border Hover:   #ffffff  /* Pure white on interaction */
 
-Accent:         #7ca894  /* Soft green */
-Accent Hover:   #8fb9a4  /* Lighter on hover */
+Accent:         #fafafa  /* Brand white */
+Accent Hover:   #ffffff  /* Brighter on hover */
 ```
 
 ## Typography
@@ -116,20 +117,38 @@ xl:   3rem    (48px)
 ### Container
 
 - Max width: 1400px
-- Padding: 24px (mobile) / 24px (tablet+)
+- Padding: 24px (all devices)
 - Centered with auto margins
+- Borders on left/right align with header borders
 
 ### Grid System
 
-Uses CSS Grid with responsive columns:
+**Line-Based Grid System** - Uses CSS Grid with borders instead of gaps:
 
 ```css
-.grid-2   /* 2 columns → 1 on mobile */
-.grid-3   /* 3 columns → 2 on tablet → 1 on mobile */
-.grid-4   /* 4 columns → 2 on tablet → 1 on mobile */
+.grid       /* Base grid with outer border */
+.grid-2     /* 2 columns → 1 on mobile */
+.grid-3     /* 3 columns → 2 on tablet → 1 on mobile */
+.grid-4     /* 4 columns → 2 on tablet → 1 on mobile */
 ```
 
-Gap: 32px default
+**Key Characteristics:**
+- `gap: 0` - No gaps between grid items
+- Borders on grid children create visual separation
+- 2px border width for strong visual presence
+- Last row items have no bottom border
+- Last column items have no right border
+
+**Usage:**
+- For card grids (projects, services)
+- For content with borders (not general layout)
+- Children should have internal padding (e.g., `padding: var(--space-xl)`)
+
+**Layout Grids:**
+For general layout (without borders), use inline CSS grid with gaps:
+```css
+style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2xl);"
+```
 
 ### Breakpoints
 
@@ -140,15 +159,88 @@ Desktop:        1024px - 1399px
 Large Desktop:  1400px+
 ```
 
+## Utility Classes
+
+### Spacing Utilities
+
+**Margin Top:**
+```css
+.mt-xs   /* 8px */
+.mt-sm   /* 16px */
+.mt-md   /* 24px */
+.mt-lg   /* 32px */
+.mt-xl   /* 48px */
+.mt-2xl  /* 64px */
+.mt-3xl  /* 96px */
+```
+
+**Margin Bottom:**
+```css
+.mb-xs   /* 8px */
+.mb-sm   /* 16px */
+.mb-md   /* 24px */
+.mb-lg   /* 32px */
+.mb-xl   /* 48px */
+.mb-2xl  /* 64px */
+.mb-3xl  /* 96px */
+```
+
+### Text Utilities
+
+**Colors:**
+```css
+.text-primary     /* Primary text color */
+.text-secondary   /* Secondary text color */
+.text-tertiary    /* Tertiary text color */
+```
+
+**Alignment:**
+```css
+.text-center  /* Center aligned text */
+.text-left    /* Left aligned text */
+.text-right   /* Right aligned text */
+```
+
+**Size:**
+```css
+.text-xs    /* 12px */
+.text-sm    /* 14px */
+.text-base  /* 16px */
+.text-lg    /* 20px */
+.text-xl    /* 24px */
+.text-2xl   /* 32px */
+.text-3xl   /* 48px */
+.text-4xl   /* 64px */
+```
+
+**Weight:**
+```css
+.font-light     /* 300 */
+.font-normal    /* 400 */
+.font-medium    /* 500 */
+.font-semibold  /* 600 */
+.font-bold      /* 700 */
+```
+
+**Tracking (Letter Spacing):**
+```css
+.tracking-tight   /* -0.02em */
+.tracking-normal  /* 0 */
+.tracking-wide    /* 0.05em */
+.tracking-wider   /* 0.1em */
+.tracking-widest  /* 0.2em */
+```
+
 ## Components
 
 ### Cards
 
 **Base Card** (`.card`)
 - White/surface background
-- 1px border
-- 4px border radius
-- Hover: Slight elevation (translateY)
+- No border (grid provides borders)
+- Border radius: 0 (sharp corners for brutalist aesthetic)
+- Internal padding: 32px (`var(--space-lg)`)
+- Hover: Background changes to surface-alt
 - Transition: 250ms ease
 
 **Card Structure:**
@@ -165,23 +257,44 @@ Large Desktop:  1400px+
 </article>
 ```
 
+**Clickable Cards:**
+Cards can be wrapped in links for navigation:
+```html
+<a href="project.html" style="text-decoration: none; color: inherit;">
+  <article class="card">
+    <!-- card content -->
+  </article>
+</a>
+```
+
 **Minimal Card** (`.card-minimal`)
 - Transparent background
 - No border
-- Hover: Background tint
+- Larger padding: 48px (`var(--space-xl)`)
+- Hover: No effect (static)
+- Used for text-heavy content like services
+
+**Standalone Cards:**
+Cards outside of grids automatically get borders:
+```css
+.card:not(.grid > .card) {
+  border: var(--border-width) solid var(--color-border);
+}
+```
 
 ### Buttons
 
 **Default Button** (`.btn`)
-- Border: 1px solid
+- Border: 2px solid
 - Padding: 16px 32px
+- Border radius: 0 (sharp corners)
 - Font: 14px, medium weight, uppercase, wide spacing
-- Hover: Border color changes to accent
+- Hover: Background fills with border color
 
 **Primary Button** (`.btn-primary`)
-- Filled with accent color
-- White text
-- Hover: Darker accent
+- Filled with accent color (near-black in light mode)
+- White/light text
+- Hover: Pure black background
 
 **Large Button** (`.btn-large`)
 - Padding: 24px 48px
@@ -192,13 +305,19 @@ Large Desktop:  1400px+
 **Header:**
 - Sticky positioning
 - 80px height
-- Border bottom
-- Flex layout: logo left, nav right
+- 2px border bottom
+- Centered content (max-width: 1400px)
+- Left/right borders align with page grid
 
 **Nav Links:**
 - Small, uppercase, wide spacing
-- Underline animation on hover
+- No underline by default
+- Hover: Color changes
 - Active state indicator
+
+**Logo:**
+- Text-only (images hidden via CSS)
+- Uppercase, wide letter spacing
 
 **Mobile Menu:**
 - Hamburger toggle (< 768px)
@@ -210,9 +329,9 @@ Large Desktop:  1400px+
 **Input Fields:**
 - Full width
 - 16px padding
-- 1px border
-- 4px border radius
-- Focus: Accent color border
+- 2px border
+- Border radius: 0 (sharp corners)
+- Focus: Accent color border (pure black/white)
 
 **Labels:**
 - Small, uppercase, wide spacing
@@ -224,10 +343,60 @@ Large Desktop:  1400px+
 
 ### Footer
 
-- Border top
+- 2px border top
 - 4-column grid (responsive)
 - Link sections: Navigate, Services, Connect, Contact
 - Bottom bar: Copyright + legal links
+- Centered content (max-width: 1400px)
+- Left/right borders align with page grid
+
+### Project Pages
+
+**Project Page Classes:**
+
+```css
+.back-link              /* Back navigation link */
+.project-title          /* Main project title (3xl, light) */
+.project-description    /* Intro paragraph */
+.project-details-title  /* Section heading (small, uppercase) */
+.project-details-grid   /* 2-column grid for details */
+.project-detail-label   /* Detail label (small, secondary) */
+.project-detail-value   /* Detail value (medium weight) */
+.grid-cell-padding      /* Standard padding for grid cells */
+.project-image          /* Responsive images */
+.project-section-heading /* Section heading (xl, light) */
+.project-text           /* Body text with proper spacing */
+.materials-list         /* Styled list for materials */
+.section-alt            /* Alternative section background */
+```
+
+**Project Page Structure:**
+```html
+<section class="section">
+  <div class="container">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    
+    <div class="grid grid-2">
+      <div class="grid-cell-padding">
+        <h1 class="project-title">Project Name</h1>
+        <p class="project-description">Description...</p>
+        
+        <h3 class="project-details-title">Project Details</h3>
+        <div class="project-details-grid">
+          <div>
+            <p class="project-detail-label">Location</p>
+            <p class="project-detail-value">London, UK</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-cell-padding">
+        <img src="..." alt="..." class="project-image">
+      </div>
+    </div>
+  </div>
+</section>
+```
 
 ## Theme Toggle
 
@@ -241,7 +410,7 @@ JavaScript-powered light/dark mode:
 
 ## Usage Examples
 
-### Creating a Page Section
+### Creating a Page Section with Cards
 
 ```html
 <section class="section">
@@ -252,7 +421,48 @@ JavaScript-powered light/dark mode:
     </div>
     
     <div class="grid grid-3">
-      <!-- Cards here -->
+      <!-- Cards are wrapped in links -->
+      <a href="project.html" style="text-decoration: none; color: inherit;">
+        <article class="card">
+          <!-- card content -->
+        </article>
+      </a>
+    </div>
+  </div>
+</section>
+```
+
+### Creating a Layout Section with Grids (No Borders)
+
+```html
+<section class="section">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2xl);">
+      <div style="padding: var(--space-xl);">
+        <h2>Content on left</h2>
+        <p>Text content...</p>
+      </div>
+      <div style="padding: var(--space-xl);">
+        <img src="..." alt="...">
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### Creating a Line-Based Grid with Content (Borders)
+
+```html
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="grid-cell-padding">
+        <h2>Content with padding</h2>
+        <p>Text inside grid cell...</p>
+      </div>
+      <div class="grid-cell-padding">
+        <img src="..." alt="..." class="project-image">
+      </div>
     </div>
   </div>
 </section>
@@ -261,20 +471,19 @@ JavaScript-powered light/dark mode:
 ### Using Utility Classes
 
 ```html
-<h2 class="text-2xl font-semibold tracking-tight mb-lg">
-  Heading with utilities
-</h2>
+<!-- Typography -->
+<h2 class="text-2xl mb-lg">Heading</h2>
+<p class="text-secondary">Secondary text</p>
 
-<p class="text-secondary mt-md mb-xl">
-  Paragraph with spacing
-</p>
-```
+<!-- Spacing -->
+<div class="mt-xl mb-2xl">Content with margins</div>
 
-### Responsive Visibility
+<!-- Alignment -->
+<div class="text-center">Centered text</div>
 
-```html
-<div class="hidden-mobile">Desktop only</div>
-<div class="visible-mobile">Mobile only</div>
+<!-- Colors -->
+<p class="text-primary">Primary color text</p>
+<p class="text-secondary">Secondary color text</p>
 ```
 
 ## File Structure
@@ -287,21 +496,29 @@ minamo.uk/
 ├── main.js             # Interactions
 ├── index.html          # Homepage
 ├── projects.html       # Projects gallery
+├── project.html        # Individual project detail page
 ├── services.html       # Services listing
 ├── about.html          # About page
 ├── contact.html        # Contact form
-└── minamo-logo.png     # Brand logo
+└── minamo-logo.png     # Brand logo (hidden in CSS)
 ```
 
 ## Best Practices
 
 1. **Use CSS Variables:** Reference `var(--color-text-primary)` instead of hex codes
-2. **Spacing Scale:** Use the defined spacing scale (xs, sm, md, etc.)
+2. **Spacing Scale:** Use the defined spacing scale (xs, sm, md, lg, xl, 2xl, 3xl)
 3. **Semantic HTML:** Use appropriate elements (`<article>`, `<section>`, `<nav>`)
 4. **Accessibility:** Include ARIA labels, alt text, and keyboard navigation
 5. **Mobile-First:** Design for mobile, enhance for desktop
-6. **Consistent Cards:** Use the card component system for content
-7. **Theme Support:** Test in both light and dark modes
+6. **Grid System:** Use `.grid` classes only for bordered card layouts
+7. **Grid Cell Padding:** Use `.grid-cell-padding` class for consistent padding in grid cells
+8. **Layout Grids:** Use inline CSS grid with gaps for general layout (when no borders needed)
+9. **Theme Support:** Test in both light and dark modes
+10. **Sharp Corners:** Border radius is 0 for brutalist aesthetic
+11. **Strong Borders:** 2px borders create visual structure
+12. **No Inline Styles:** Use CSS classes instead of inline styles for maintainability
+13. **Utility Classes:** Use utility classes (`.mt-xl`, `.text-center`) for common patterns
+14. **Semantic Classes:** Use semantic class names (`.project-title`, `.back-link`) for specific components
 
 ## Browser Support
 
@@ -320,15 +537,24 @@ minamo.uk/
 
 ## Future Enhancements
 
-- [ ] CSS Grid masonry layout for projects
-- [ ] Intersection Observer for scroll animations
+- [x] Monochrome color system
+- [x] Line-based grid layout
+- [x] Project detail pages
+- [ ] Dynamic project content (CMS integration)
 - [ ] Filter/sort functionality for projects
+- [ ] Intersection Observer for scroll animations
 - [ ] Newsletter signup integration
 - [ ] Blog/journal section
-- [ ] Project detail pages with galleries
+- [ ] Image lightbox/gallery viewer
+
+## Design Inspiration
+
+- **Minimalissimo.com** - Line-based grid system, monochrome palette
+- **Brutalist web design** - Raw, unpolished aesthetic with strong structure
+- **Swiss design** - Grid systems, typography hierarchy
 
 ---
 
-**Version:** 1.0.0  
+**Version:** 2.0.0  
 **Last Updated:** October 2025  
 **Maintainer:** Minamo Interiors
