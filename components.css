@@ -72,13 +72,6 @@ a:hover {
   transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
-.header .container {
-  border-left: var(--border-width) solid var(--color-border);
-  border-right: var(--border-width) solid var(--color-border);
-  border-top: var(--border-width) solid var(--color-border);
-  border-bottom: var(--border-width) solid var(--color-border);
-}
-
 .header-inner {
   display: flex;
   align-items: center;
@@ -147,7 +140,6 @@ a:hover {
 /* Theme Toggle Button */
 .theme-toggle {
   background: none;
-  border: var(--border-width) solid var(--color-border);
   border-radius: 0;
   padding: var(--space-xs) var(--space-sm);
   cursor: pointer;
@@ -160,7 +152,6 @@ a:hover {
 }
 
 .theme-toggle:hover {
-  border-color: var(--color-border-hover);
   background-color: var(--color-text-primary);
   color: var(--color-background);
 }
@@ -180,11 +171,6 @@ a:hover {
     display: block;
   }
 
-  .header-inner {
-    border-left: none;
-    border-right: none;
-  }
-
   .nav {
     position: fixed;
     top: var(--header-height);
@@ -193,7 +179,6 @@ a:hover {
     max-width: 300px;
     height: calc(100vh - var(--header-height));
     background-color: var(--color-surface);
-    border-left: var(--border-width) solid var(--color-border);
     flex-direction: column;
     align-items: flex-start;
     padding: var(--space-lg);
@@ -306,7 +291,6 @@ a:hover>.card .card-image {
 /* Card Variants */
 .card-minimal {
   background-color: transparent;
-  border: none;
   border-radius: 0;
   padding: var(--space-xl);
   /* Add generous padding */
@@ -322,15 +306,6 @@ a:hover>.card .card-image {
   /* Content uses card's padding */
 }
 
-/* Standalone cards (not in grid) need borders */
-.card:not(.grid > .card) {
-  border: var(--border-width) solid var(--color-border);
-}
-
-.card:not(.grid > .card):hover {
-  border-color: var(--color-border-hover);
-}
-
 /* ============================================
    GRID SYSTEM (LINE-BASED)
    ============================================ */
@@ -339,7 +314,6 @@ a:hover>.card .card-image {
   display: grid;
   gap: 0;
   /* No gap - borders create spacing */
-  border: var(--border-width) solid var(--color-border);
 }
 
 .grid-2 {
@@ -354,10 +328,8 @@ a:hover>.card .card-image {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Grid children get borders to create line-based layout */
+/* Grid children */
 .grid>* {
-  border-right: var(--border-width) solid var(--color-border);
-  border-bottom: var(--border-width) solid var(--color-border);
   box-sizing: border-box;
 }
 
@@ -380,71 +352,14 @@ a:hover>.card .card-image {
   outline: none;
 }
 
-/* Remove right border from last column items */
-.grid-2>*:nth-child(2n),
-.grid-3>*:nth-child(3n),
-.grid-4>*:nth-child(4n) {
-  border-right: none;
-}
-
-/* Remove bottom border from all items in last row for common grid sizes */
-/* For 2-column grids with 4, 6, 8, 10 items */
-.grid-2>*:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-
-/* For 3-column grids with 3, 6, 9 items */
-.grid-3>*:nth-last-child(-n+3) {
-  border-bottom: none;
-}
-
-/* For 4-column grids with 4, 8, 12 items */
-.grid-4>*:nth-last-child(-n+4) {
-  border-bottom: none;
-}
-
 /* Responsive Grid */
 @media (max-width: 1023px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid-4>*:nth-child(4n) {
-    border-right: var(--border-width) solid var(--color-border);
-  }
-
-  .grid-4>*:nth-child(2n) {
-    border-right: none;
-  }
-
-  /* Adjust bottom borders for 2-column layout */
-  .grid-4>*:nth-last-child(-n+4) {
-    border-bottom: var(--border-width) solid var(--color-border);
-  }
-
-  .grid-4>*:nth-last-child(-n+2) {
-    border-bottom: none;
-  }
-
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-3>*:nth-child(3n) {
-    border-right: var(--border-width) solid var(--color-border);
-  }
-
-  .grid-3>*:nth-child(2n) {
-    border-right: none;
-  }
-
-  /* Adjust bottom borders for 2-column layout */
-  .grid-3>*:nth-last-child(-n+3) {
-    border-bottom: var(--border-width) solid var(--color-border);
-  }
-
-  .grid-3>*:nth-last-child(-n+2) {
-    border-bottom: none;
   }
 }
 
@@ -454,15 +369,6 @@ a:hover>.card .card-image {
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-  }
-
-  .grid>* {
-    border-right: none !important;
-  }
-
-  /* Single column - only last item has no bottom border */
-  .grid>*:last-child {
-    border-bottom: none !important;
   }
 }
 
@@ -482,7 +388,6 @@ a:hover>.card .card-image {
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   text-decoration: none;
-  border: var(--border-width) solid var(--color-border);
   border-radius: 0;
   background-color: transparent;
   color: var(--color-text-primary);
@@ -491,20 +396,17 @@ a:hover>.card .card-image {
 }
 
 .btn:hover {
-  border-color: var(--color-border-hover);
   background-color: var(--color-text-primary);
   color: var(--color-background);
 }
 
 .btn-primary {
   background-color: var(--color-text-primary);
-  border-color: var(--color-text-primary);
   color: var(--color-background);
 }
 
 .btn-primary:hover {
   background-color: var(--color-background);
-  border-color: var(--color-text-primary);
   color: var(--color-text-primary);
 }
 
@@ -548,7 +450,6 @@ select.form-input {
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
   background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
   border-radius: 0;
   transition: all var(--transition-fast);
   box-sizing: border-box;
@@ -558,7 +459,6 @@ select.form-input {
 .form-textarea:focus,
 select.form-input:focus {
   outline: none;
-  border-color: var(--color-text-primary);
 }
 
 .form-textarea {
@@ -576,9 +476,6 @@ form .btn {
    ============================================ */
 
 .footer {
-  border-top: var(--border-width) solid var(--color-border);
-  border-left: var(--border-width) solid var(--color-border);
-  border-right: var(--border-width) solid var(--color-border);
   max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
@@ -618,7 +515,6 @@ form .btn {
 
 .footer-bottom {
   padding-top: var(--space-xl);
-  border-top: var(--border-width) solid var(--color-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -653,8 +549,6 @@ form .btn {
   max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
-  border-left: var(--border-width) solid var(--color-border);
-  border-right: var(--border-width) solid var(--color-border);
 }
 
 .hero-logo {
@@ -688,8 +582,6 @@ form .btn {
 @media (max-width: 768px) {
   .hero {
     padding: var(--space-2xl) 0;
-    border-left: none;
-    border-right: none;
   }
 
   .hero-logo {
@@ -718,8 +610,6 @@ form .btn {
   max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
-  border-left: var(--border-width) solid var(--color-border);
-  border-right: var(--border-width) solid var(--color-border);
 }
 
 .section-header {
@@ -742,8 +632,6 @@ form .btn {
 @media (max-width: 768px) {
   .section {
     padding: var(--space-2xl) 0;
-    border-left: none;
-    border-right: none;
   }
 
   .section-title {
