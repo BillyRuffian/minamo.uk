@@ -69,11 +69,14 @@ a:hover {
   top: 0;
   z-index: var(--z-sticky);
   background-color: var(--color-background);
-  border-bottom: var(--border-width) solid var(--color-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.header .container {
   border-left: var(--border-width) solid var(--color-border);
   border-right: var(--border-width) solid var(--color-border);
   border-top: var(--border-width) solid var(--color-border);
-  transition: background-color var(--transition-base), border-color var(--transition-base);
+  border-bottom: var(--border-width) solid var(--color-border);
 }
 
 .header-inner {
@@ -81,13 +84,6 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
-  max-width: var(--container-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-  border-left: var(--border-width) solid var(--color-border);
-  border-right: var(--border-width) solid var(--color-border);
 }
 
 .logo {
@@ -816,7 +812,7 @@ form .btn {
 }
 
 /* Grid cell padding */
-.grid > .grid-cell-padding {
+.grid>.grid-cell-padding {
   padding: 48px !important;
   box-sizing: border-box;
 }
