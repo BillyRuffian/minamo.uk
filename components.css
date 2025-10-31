@@ -544,7 +544,8 @@ form .btn {
    ============================================ */
 
 .hero {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-3xl) 0 var(--space-3xl) 0;
+  padding-top: calc(var(--space-3xl) * 2);
   text-align: center;
   max-width: var(--container-max-width);
   margin-left: auto;
@@ -557,7 +558,7 @@ form .btn {
 }
 
 .hero-title {
-  font-size: var(--font-size-4xl);
+  font-size: 8rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-wider);
   margin-bottom: var(--space-sm);
@@ -589,7 +590,7 @@ form .btn {
   }
 
   .hero-title {
-    font-size: var(--font-size-2xl);
+    font-size: 5rem;
   }
 
   .hero-subtitle {
