@@ -240,6 +240,17 @@ a:hover>.card {
   background-color: var(--color-surface-alt);
 }
 
+/* Portrait variant for people photos */
+.card-image-wrapper-portrait {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--space-lg);
+  padding-bottom: 133.33%;
+  /* 3:4 portrait aspect ratio */
+  overflow: hidden;
+  background-color: var(--color-surface-alt);
+}
+
 .card-image {
   position: absolute;
   top: 0;
@@ -613,6 +624,10 @@ form .btn {
   margin-right: auto;
 }
 
+.section-no-top-padding {
+  padding-top: 0;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: var(--space-2xl);
@@ -788,5 +803,56 @@ form .btn {
 .faq-answer {
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
-  margin: 0;
+}
+
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+/* Content container with max-width centering */
+.content-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Story section heading */
+.story-heading {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+/* Story paragraphs */
+.story-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.story-text:last-of-type {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Values section heading */
+.values-heading {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* Value item container */
+.value-item {
+  margin-bottom: var(--space-xl);
+}
+
+/* Value item heading */
+.value-heading {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* Value item text */
+.value-text {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
 }
